@@ -95,12 +95,12 @@ export default class Room{
                 });
             }
 
-            if(child.name === "Mini_Floor"){
+            if(child.name === "minifloor"){
                 child.position.x = -0.363905;
                 child.position.z= -11.5518;
             }
 
-            //if(child.name === "Mailbox" || 
+            //if(child.name === "mailbox" || 
             //child.name === "minifloorobjects"){
                 //child.scale.set(0,0,0);
             //}
