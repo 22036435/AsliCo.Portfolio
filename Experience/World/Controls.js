@@ -417,69 +417,12 @@ export default class Controls{
                             duration: 0.3,
                         });
                     }
-                    /*if (child.name === "FloorFirst") {
-                        this.fourth = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            ease: "back.out(2)",
-                            duration: 0.3,
-                        });
-                    }
-                    if (child.name === "FloorSecond") {
-                        this.fifth = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            duration: 0.3,
-                        });
-                    }
-                    if (child.name === "FloorThird") {
-                        this.sixth = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            ease: "back.out(2)",
-                            duration: 0.3,
-                        });
-                    }
-                    if (child.name === "Dirt") {
-                        this.seventh = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            ease: "back.out(2)",
-                            duration: 0.3,
-                        });
-                    }
-                    if (child.name === "Flower1") {
-                        this.eighth = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            ease: "back.out(2)",
-                            duration: 0.3,
-                        });
-                    }
-                    if (child.name === "Flower2") {
-                        this.ninth = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            ease: "back.out(2)",
-                            duration: 0.3,
-                        });
-                    }*/
+                    
                 });
                 this.secondPartTimeline.add(this.first);
                 this.secondPartTimeline.add(this.second);
                 this.secondPartTimeline.add(this.third, "-=0.2");
-                //this.secondPartTimeline.add(this.fourth, "-=0.2");
-                //this.secondPartTimeline.add(this.fifth, "-=0.2");
-                //this.secondPartTimeline.add(this.sixth, "-=0.2");
-                //this.secondPartTimeline.add(this.seventh, "-=0.2");
-                //this.secondPartTimeline.add(this.eighth);
-                //this.secondPartTimeline.add(this.ninth, "-=0.1");
+               
             },
         });
     }
