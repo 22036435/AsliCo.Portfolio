@@ -393,14 +393,14 @@ export default class Controls{
                 });
 
                 this.room.children.forEach((child) => {
-                    if (child.name === "Mini_Floor") {
+                    if (child.name === "minifloor") {
                         this.first = GSAP.to(child.position, {
                             x: -4.90009,
                             z: -16.2823,
                             duration: 0.3,
                         });
                     }
-                    if (child.name === "Mailbox") {
+                    if (child.name === "mailbox") {
                         this.second = GSAP.to(child.scale, {
                             x: 1,
                             y: 1,
