@@ -33,7 +33,7 @@ export default class Preloader extends EventEmitter {
 
         this.room = this.experience.world.room.actualRoom;
         this.roomChildren = this.experience.world.room.roomChildren;
-        console.log(this.roomChildren);
+        //console.log(this.roomChildren);
     }
 
     firstIntro() {
@@ -305,8 +305,8 @@ export default class Preloader extends EventEmitter {
                     },
                     "chair"
                 )
-                /*.to(
-                    this.roomChildren.fish.scale,
+                .to(
+                    this.roomChildren.nfts.scale,
                     {
                         x: 1,
                         y: 1,
@@ -324,7 +324,7 @@ export default class Preloader extends EventEmitter {
                         duration: 1,
                     },
                     "chair"
-                )*/
+                )
                 .to(".arrow-svg-wrapper", {
                     opacity: 1,
                     onComplete: resolve,

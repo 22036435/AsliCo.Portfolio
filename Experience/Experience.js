@@ -13,15 +13,14 @@ import Preloader from "./Preloader.js";
 import World from "./World/World.js";
 import Controls from "./World/Controls.js";
 
-
-export default class Experience{
+export default class Experience {
     static instance;
-    constructor(canvas){
-        if(Experience.instance){
+    constructor(canvas) {
+        if (Experience.instance) {
             return Experience.instance;
         }
-        Experience.instance = this
-        this.canvas=canvas;
+        Experience.instance = this;
+        this.canvas = canvas;
         this.scene = new THREE.Scene();
         this.time = new Time();
         this.sizes = new Sizes();
@@ -36,22 +35,21 @@ export default class Experience{
             this.controls = new Controls();
         });
 
-        this.sizes.on("resize", ()=>{
+        this.sizes.on("resize", () => {
             this.resize();
         });
-        
-        this.time.on("update", ()=>{
+        this.time.on("update", () => {
             this.update();
         });
     }
 
-    resize(){
+    resize() {
         this.camera.resize();
         this.world.resize();
         this.renderer.resize();
     }
-    
-    update(){
+
+    update() {
         this.preloader.update();
         this.camera.update();
         this.world.update();
