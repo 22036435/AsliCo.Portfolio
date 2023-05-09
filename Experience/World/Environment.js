@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { TubeGeometry } from "three";
 import Experience from "../Experience.js";
 import GSAP from "gsap";
 import GUI from 'lil-gui'; 
