@@ -8,7 +8,7 @@ export default class Controls{
     constructor(){
         this.experience = new Experience();
         this.scene = this.experience.scene;
-        this.sized = this.experience.sizes;
+        this.sizes = this.experience.sizes;
         this.resources = this.experience.resources;
         this.time = this.experience.time;
         this.camera = this.experience.camera;
@@ -35,27 +35,6 @@ export default class Controls{
         }
 
         this.setScrollTrigger();
-
-
-        //this.progress= 0;
-        //this.dummyCurve = new THREE.Vector3(0,0,0);
-
-        //this.lerp={
-            //current: 0,
-            //target: 0,
-            //ease: 0.1,
-        //}
-
-        //this.position = new THREE.Vector3(0,0,0);
-        //this.lookAtPosition = new THREE.Vector3(0,0,0);
-
-        //this.directionalVector = new THREE.Vector3(0, 0, 0);
-        //this.staticVector = new THREE.Vector3(0, 1, 0);
-        //this.crossVector = new THREE.Vector3(0, 0, 0);
-
-        //this.setPath();
-        //this.onWheel();
-    
     }
 
     setupASScroll() {
@@ -395,8 +374,8 @@ export default class Controls{
                 this.room.children.forEach((child) => {
                     if (child.name === "Mini_Floor") {
                         this.first = GSAP.to(child.position, {
-                            x: -4.90009,
-                            z: -16.2823,
+                            x: -5.44055,
+                            z: 13.6135,
                             duration: 0.3,
                         });
                     }
@@ -417,148 +396,18 @@ export default class Controls{
                             duration: 0.3,
                         });
                     }
-                    /*if (child.name === "FloorFirst") {
-                        this.fourth = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            ease: "back.out(2)",
-                            duration: 0.3,
-                        });
-                    }
-                    if (child.name === "FloorSecond") {
-                        this.fifth = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            duration: 0.3,
-                        });
-                    }
-                    if (child.name === "FloorThird") {
-                        this.sixth = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            ease: "back.out(2)",
-                            duration: 0.3,
-                        });
-                    }
-                    if (child.name === "Dirt") {
-                        this.seventh = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            ease: "back.out(2)",
-                            duration: 0.3,
-                        });
-                    }
-                    if (child.name === "Flower1") {
-                        this.eighth = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            ease: "back.out(2)",
-                            duration: 0.3,
-                        });
-                    }
-                    if (child.name === "Flower2") {
-                        this.ninth = GSAP.to(child.scale, {
-                            x: 1,
-                            y: 1,
-                            z: 1,
-                            ease: "back.out(2)",
-                            duration: 0.3,
-                        });
-                    }*/
+                  
                 });
                 this.secondPartTimeline.add(this.first);
                 this.secondPartTimeline.add(this.second);
                 this.secondPartTimeline.add(this.third, "-=0.2");
-                //this.secondPartTimeline.add(this.fourth, "-=0.2");
-                //this.secondPartTimeline.add(this.fifth, "-=0.2");
-                //this.secondPartTimeline.add(this.sixth, "-=0.2");
-                //this.secondPartTimeline.add(this.seventh, "-=0.2");
-                //this.secondPartTimeline.add(this.eighth);
-                //this.secondPartTimeline.add(this.ninth, "-=0.1");
             },
         });
     }
-
-   
-    //this is the function for setting curve and coloring it out to see and looping it with true statement---------------------
-    //setPath(){
-        //this.curve = new THREE.CatmullRomCurve3([
-            //new THREE.Vector3(-5, 0, 0),
-            //new THREE.Vector3(0, 0, -5),
-            //new THREE.Vector3(5, 0, 0),
-            //new THREE.Vector3(0, 0, 5),
-        //],
-        //true
-        //);        
-
-        //const points = this.curve.getPoints(50);
-        //const geometry = new THREE.BufferGeometry().setFromPoints(points);
-
-        //const material = new THREE.LineBasicMaterial({ color: 0xff0000});
-
-        //create the final object to add to the scene
-        //const curveObject = new THREE.Line( geometry, material);
-        //this.scene.add(curveObject);
-    //}
-
-    //this is a function for move the camera with mouse wheel---------------------
-    //onWheel(){
-        //window.addEventListener("wheel", (e)=> {
-            //if(e.deltaY > 0){
-                //this.lerp.target +=0.01;
-                //this.back = false;
-            //} else{
-                //this.lerp.target -= 0.01;
-                //this.back = false;
-            //}
-        //});
-    //}
 
     resize(){
     }
 
     update(){
-        //this.lerp.current = GSAP.utils.interpolate(
-            //this.lerp.current,
-            //this.lerp.target,
-            //this.lerp.ease
-        //);
-
-        //this is for circular camera movement always looks towards the inside of the curve-------------------------
-        //this.curve.getPointAt(this.lerp.current % 1, this.position);
-        //this.camera.orthographicCamera.position.copy(this.position);
-
-        //this.directionalVector.subVectors(
-            //this.curve.getPointAt((this.lerp.current%1)+0.000001),
-            //this.position
-        //);
-        //this.directionalVector.normalize();
-        //this.crossVector.crossVectors(
-            //this.directionalVector,
-            //this.staticVector,
-        //);
-        //this.crossVector.multiplyScalar(100000);
-        //this.camera.orthographicCamera.lookAt(this.crossVector); //you can change into 0,0,0 you can always see the origin, in that way the target always gonna be your model
-        
-        //this is the basics of camera movements------------------
-        //if(this.back){
-        //  this.lerp.target -= 0.001;
-        //}else{
-        //  this.lerp.target += 0.001; // it makes it contuniously moving forward until you scroll
-        //}
-       
-        //this.lerp.target= GSAP.utils.clamp(0, 1, this.lerp.target);
-        //this.lerp.current= GSAP.utils.clamp(0, 1, this.lerp.current);
-        //this.curve.getPointAt(this.lerp.current, this.position);
-
-        //this.curve.getPointAt(this.lerp.current+0.00001, this.lookAtPosition);
-        
-        //this.camera.orthographicCamera.position.copy(this.position);
-        //this.camera.orthographicCamera.lookAt(this.lookAtPosition); //camera looks towards the curve
     }
 }
