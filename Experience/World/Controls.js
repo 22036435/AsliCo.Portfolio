@@ -8,7 +8,7 @@ export default class Controls{
     constructor(){
         this.experience = new Experience();
         this.scene = this.experience.scene;
-        this.sized = this.experience.sizes;
+        this.sizes = this.experience.sizes;
         this.resources = this.experience.resources;
         this.time = this.experience.time;
         this.camera = this.experience.camera;
