@@ -73,11 +73,11 @@ export default class Room{
                 child.material.opacity = 0.5;
             }*/
 
-            /*if(child.name === "screen1"){
-                child.material = new THREE.MeshBasicMaterial({
+            if(child.name === "computer"){
+                child.children[1].material = new THREE.MeshBasicMaterial({
                     map: this.resources.items.screen,
                 });
-            }*/
+            }
 
             if(child.name === "nfts"){
                 child.children[3].material = new THREE.MeshBasicMaterial({
