@@ -19,9 +19,9 @@ export default [
         type: "videoTexture",
         path: "/textures/3.MP4",
     },
-    /*{
+    {
         name: "screen",
         type: "videoTexture",
-        path: "/textures/1.mp4", //change it with a portfolio website video.
-    },*/
+        path: "/textures/screenAnimation.MP4",
+    },
 ];
