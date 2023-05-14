@@ -181,7 +181,8 @@ export default class Controls{
                     .to(this.camera.orthographicCamera.position, {
                         y: 8,
                         x: 2.3,
-                    });
+                    }, "same"
+                    );
 
                 // Third section -----------------------------------------
                 this.thirdMoveTimeline = new GSAP.timeline({
