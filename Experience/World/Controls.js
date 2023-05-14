@@ -156,7 +156,7 @@ export default class Controls{
                                 return 1;
                             },
                             z: () => {
-                                return this.sizes.height * 0.0032;
+                                return this.sizes.height * 0.0032; //0.0032
                             },
                         },
                         "same"
@@ -177,7 +177,11 @@ export default class Controls{
                             height: 0.7 * 4,
                         },
                         "same"
-                    );
+                    )
+                    .to(this.camera.orthographicCamera.position, {
+                        y: 8,
+                        x: 2.3,
+                    });
 
                 // Third section -----------------------------------------
                 this.thirdMoveTimeline = new GSAP.timeline({
@@ -250,7 +254,8 @@ export default class Controls{
                     .to(
                         this.room.position,
                         {
-                            x: 1.5,
+                            x: -0.1,
+                            z: 4,
                         },
                         "same"
                     );
